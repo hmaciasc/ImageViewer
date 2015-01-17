@@ -64,7 +64,7 @@ public class FileImageLoader implements ImageLoader{
     }
 
     private void linkNext(Image[] images) {
-        for (int i = 1; i < images.length; i++) {
+        for (int i = 0; i < images.length - 1; i++) {
             images[i].setNext(images[i+1]);
         }
     }
