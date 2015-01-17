@@ -67,11 +67,13 @@ public class FileImageLoader implements ImageLoader{
         for (int i = 0; i < images.length - 1; i++) {
             images[i].setNext(images[i+1]);
         }
+        images[images.length-1].setNext(images[0]);
     }
 
     private void linkPrev(Image[] images) {
         for (int i = 1; i < images.length; i++) {
             images[i].setPrev(images[i-1]);
         }
+        images[0].setPrev(images[images.length-1]);
     }
 }
