@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 import model.Image;
 import ui.ImageDisplay;
-import ui.ImageResizer;
+import ui.Resizer;
 
 public class SwingImageDisplay extends JPanel implements ImageDisplay {
 
@@ -31,7 +31,7 @@ public class SwingImageDisplay extends JPanel implements ImageDisplay {
     }
     
     private Rectangle calculateBox(BufferedImage bufferedImage){
-        ImageResizer.ImageSize size = new ImageResizer(this.getWidth(),
+        Resizer.ImageSize size = new Resizer(this.getWidth(),
                 this.getHeight()).resize(bufferedImage.getWidth(),
                                          bufferedImage.getHeight());
         return new Rectangle(

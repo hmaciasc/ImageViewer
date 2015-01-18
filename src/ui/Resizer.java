@@ -1,10 +1,10 @@
 package ui;
 
-public class ImageResizer {
+public class Resizer {
     private final int width;
     private final int height;
 
-    public ImageResizer(int width, int height) {
+    public Resizer(int width, int height) {
         this.width = width;
         this.height = height;
     }
